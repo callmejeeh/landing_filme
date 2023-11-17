@@ -1,5 +1,6 @@
 @use 'variaveis';
 @use 'header';
+@use 'movie-info';
 
 * {
     padding: 0;
@@ -7,10 +8,50 @@
     box-sizing: border-box;
 }
 
-.container__landing {
-    max-width: 1000px;
-    width: 100%;
-    margin: 150px;
-    background-image: url(../../dist/images/Foto_capa.webp);
+@mixin text($fontSize: 18px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 15px;
+    color: variaveis.$corTextoPrincipal;
 }
+
+@mixin title($fontSize: 32px) {
+    font-size: $fontSize;
+    color: variaveis.$corTextoPrincipal;
+}
+
+.text--big {
+    @include text(20px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(14px);
+}
+
+.title--big {
+    @include title(40px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(24px)
+}
+
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+
+
+    &__landing {  
+        background-image: url(../../dist/images/Foto_capa.jpg);    
+        background-size: cover;
+        }
+    }
 

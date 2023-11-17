@@ -1,17 +1,27 @@
+@use 'variaveis';
+
 .header {
 
+
+    
     &__container {
-        padding: 8px 36px;
+        padding: 32px 32px 16px;
         display: flex;
         justify-content: space-between;
+
+        .button {
+            color: variaveis.$corTextoPrincipal;
+            list-style: none;
+            text-decoration: none;
+        }
     }
 
     &__logo {
-        font-family: 'Calistoga', serif;
+        font-family: variaveis.$fontTitulo;
         color: variaveis.$corTextoPrincipal;
-        max-width: 100px;
+        max-width: 200px;
         width: 100%;
-        margin: 5px;
+        border: none;
 
     }
 
@@ -19,8 +29,14 @@
         display: flex;
 
         &__item {
-            margin: 5px;
+            font-family: variaveis.$fontTitulo;
+            padding: 8px 24px;
 
+            .profile {
+                img {
+                    max-width: 24px;
+                }
+            }
         }
     }
 }

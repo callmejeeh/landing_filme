@@ -1,0 +1,61 @@
+@use 'variaveis';
+
+.movie-info {
+    max-width: 500px;
+    display: block;
+    margin: 56px 32px 56px 530px;
+
+
+    h2 {
+        font-family: variaveis.$fontTitulo2;
+        font-weight: normal;
+    }
+
+    hr {
+        border: 1px solid variaveis.$corTextoPrincipal;
+        margin-bottom: 16px;
+        margin-top: 16px;
+        opacity: 0.5;
+    }
+
+    .text {
+        color: variaveis.$corTextoPrincipal;
+        font-family: variaveis.$fontText;
+        opacity: 0.6;
+        display: inline;
+        padding: 16px;
+        text-align: right;
+
+        &--fav {
+            font-weight: bold;
+            opacity: 1;
+        }
+    }
+
+    button {
+        width: 150px;
+        margin-top: 32px;
+        padding: 8px;
+        background-color: variaveis.$corBotao;
+        border-radius: 16px;
+        border-color: none;
+        color: variaveis.$corTextoPrincipal;
+        font-family: variaveis.$fontTitulo;
+        font-weight: normal;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: lighten(variaveis.$corBotao, 5%);
+            cursor: pointer;
+        }
+    }
+
+    &__icon {
+        max-width: 24px;
+        width: 100%;
+        margin-top: 24px;
+        margin-left: 32px;
+        cursor: pointer;
+    }
+}

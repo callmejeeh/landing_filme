@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const sass = require ('gulp-sass')(require('sass'));
-const imagemin = require ('gulp-imagemin'); //baixar a versão @7.1.0
+const imagemin = require('gulp-imagemin'); //baixar a versão @7.1.0
 
 
 function styles() {
@@ -15,9 +15,9 @@ function images(){
     .pipe(gulp.dest('./dist/images'));
 }
 
-exports.default = gulp.parallel(styles, images);
+exports.default = gulp.parallel(styles,images);
 
 exports.watch = function () {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles, images))
+    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
 
 }
